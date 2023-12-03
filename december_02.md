@@ -29,10 +29,10 @@ const materials = 'psli'
 manufacture(gifts, materials) // []
 ```
 
-[✅ Solución](https://github.com/jcuencagento/codemberJCG/blob/master/december_02.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_02.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/codemberJCG/blob/master/december_01.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_01.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/codemberJCG/blob/master/december_03.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_03.md)

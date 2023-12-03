@@ -31,7 +31,7 @@ console.log(firstRepeatedId3) // 5
 ¡Ojo! Los elfos dicen que esto es una prueba técnica de Google.
 
 
-[✅ Solución](https://github.com/jcuencagento/codemberJCG/blob/master/december_01.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_01.js)
 
 
-[➡️ Next](https://github.com/jcuencagento/codemberJCG/blob/master/december_02.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_02.md)
