@@ -33,7 +33,7 @@ Notas:
 
 > [!NOTE]
 > La solución propuesta consiste en iterar sobre el mensaje mientras incluya algún paréntesis, para ello se recoge
-> el índice del último paréntesis de apertura y el primero de cierre, para hacer un reverse del array (formado por el string)
+> el índice del último paréntesis de apertura y el primero de cierre, para hacer un reverse del array (formado por el string con los índices mencionados)
 > y volver a hacer el mismo proceso hasta que no queden paréntesis.
 
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_04.js)
