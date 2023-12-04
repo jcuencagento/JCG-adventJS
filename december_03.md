@@ -32,6 +32,12 @@ A tener en cuenta:
  - La secuencia original puede estar vacía
 
 
+> [!NOTE]
+> La solución propuesta consiste en pasar el array "original" a Set (elimina repeticiones) para después iterar
+> el array "modified". En esta iteración, o se elimina el carácter iterado en el set "original" si existe o añade
+> el carácter si no aparecía en el set. Para finalizar devuelve el primer carácter diferente o un string vacío.
+
+
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_03.js)
 
 

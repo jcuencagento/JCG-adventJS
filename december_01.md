@@ -30,6 +30,10 @@ console.log(firstRepeatedId3) // 5
 
 ¡Ojo! Los elfos dicen que esto es una prueba técnica de Google.
 
+> [!NOTE]
+> La solución propuesta consiste en filtrar los elementos del array en el que su índice no coincide con la primera
+> aparición del número en el propio array, por tanto si el resultado tiene algún elemento, se devuelve el primero.
+
 
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_01.js)
 

@@ -29,6 +29,11 @@ const materials = 'psli'
 manufacture(gifts, materials) // []
 ```
 
+> [!NOTE]
+> La solución propuesta consiste en filtrar los elementos que una vez iterados (pasando el string a array),
+> devuelve true la función every, que checkea que cada carácter del "gift" esté incluido en el array de "materiales".
+
+
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_02.js)
 
 
