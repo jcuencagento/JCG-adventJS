@@ -38,13 +38,9 @@ Nota:
 
 
 > [!NOTE]
-> La solución propuesta consiste en dividir el cubo en dos partes (dos bucles for).
-> En el primer for se realiza la parte superior, cada fila yendo de 0 a el tamaño - 1. La primera fila al ser una arista
-> será tratada de manera especial, solo con # y en el resto se introducirán los símbolos dependiendo del tamaño
-> En el segundo bucle se irá desde la fila superior (tamaño) a 0, ya que las longitudes disminuyen conforme bajas en el cubo.
-> La primera y la última fila serán tratadas de diferente manera al ser aristas (la primera también tiene "produndidad") y en el
-> resto se incluirá el símbolo como anteriormente, pero esta vez reduciendo el número de símbolos.
-> Esta solución tiene complejidad 7, por lo tanto es mejorable, pero ofrece un número elevado de operaciones por segundo.
+> La solución propuesta consiste en, primero repetir los carácter del árbol a un número suficiente (altura*(altura-1)), para después iterar
+> sobre dos variables (índice de altura e índice de elemento del árbol), añadiendo un padding de espacios al comienzo de cada línea dependiendo
+> del índice de altura y espacios entre los carácteres, más el salto de línea. Por último añadir altura-1 espacios, el palo y el último salto de línea.
 
 
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_10.js)

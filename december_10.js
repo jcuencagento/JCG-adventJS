@@ -1,5 +1,5 @@
 function createChristmasTree(ornaments, height) {
-    const ornaments_rep = ornaments.repeat(height*height);
+    const ornaments_rep = ornaments.repeat(height*(height-1));
     let r = '';
     for (let i = 1, j = 0; i <= height; j+=i, i++) {
         r += ornaments_rep

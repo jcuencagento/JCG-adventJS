@@ -28,13 +28,9 @@ Si se puede formar el palíndromo con diferentes intercambios, siempre se debe d
 
 
 > [!NOTE]
-> La solución propuesta consiste en dividir el cubo en dos partes (dos bucles for).
-> En el primer for se realiza la parte superior, cada fila yendo de 0 a el tamaño - 1. La primera fila al ser una arista
-> será tratada de manera especial, solo con # y en el resto se introducirán los símbolos dependiendo del tamaño
-> En el segundo bucle se irá desde la fila superior (tamaño) a 0, ya que las longitudes disminuyen conforme bajas en el cubo.
-> La primera y la última fila serán tratadas de diferente manera al ser aristas (la primera también tiene "produndidad") y en el
-> resto se incluirá el símbolo como anteriormente, pero esta vez reduciendo el número de símbolos.
-> Esta solución tiene complejidad 7, por lo tanto es mejorable, pero ofrece un número elevado de operaciones por segundo.
+> La solución propuesta consiste en comprobar si la palabra es directamente palíndroma convirtiendo a array y usando reverse, y en caso contrario
+> doblemente iterar para ir cambiando las posiciones de cada uno de los carácteres con los que tiene a continuación. En cada iteración se comprueba
+> de la misma manera que antes si la palabra ya es palíndroma y se devuelve dependiendo del resultado. Solución poco optimizada.
 
 
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_11.js)
