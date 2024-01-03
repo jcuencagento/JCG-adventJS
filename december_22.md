@@ -1,57 +1,53 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## Lenguaje de programación
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+En la fábrica de juguetes de Santa, los elfos están desarrollando un lenguaje de programación llamado Santa.js 👨‍💻👩‍💻 basado en símbolos para controlar sus máquinas de juguetes 🚂.
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
+Han creado un sistema de instrucciones simple y necesitan tu ayuda para construir un compilador que interprete estos símbolos.
 
-El almacén se representa como un array de cadenas de texto, donde:
+El compilador trabaja con un contador que inicialmente tiene un valor de 0. Las instrucciones modificarán el valor de este contador.
 
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
+Instrucciones del lenguaje de los elfos en base a símbolos:
 
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
+- +: Incrementa en 1 el valor del contador.
+- *: Multiplica por 2 el valor del contador.
+- -: Resta 1 al valor del contador.
+- %: Marca un punto de retorno. No modifica el contador.
+- <: Vuelve atrás una vez a la última instrucción con el símbolo % que haya visto. Si no hay un % previo, no hace nada.
+- ¿: Inicia un bloque condicional que se ejecuta si el contador es mayor a 0.
+- ?: Finaliza un bloque condicional.
 
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+Crea una función compile que reciba un string con las instrucciones del lenguaje y devuelve el resultado de ejecutarlas. Aquí tienes algunos ejemplos:
 
 ```javascript
-const store = ['..!....', '...*.*.']
+compile('++*-') // 3
+// (1 + 1) * 2 - 1 = 3
 
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
-/*
-[
-  ".......",
-  "...*!*."
-]
-*/
+compile('++%++<') // 6
+// 1 + 1 + 1 + 1 + 1 + 1 = 6
 
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
+compile('++<--') // 0
+// 1 + 1 - 1 - 1 = 0
+
+compile('++¿+?') // 3
+// 1 + 1 + 1 = 3
+
+compile('--¿+++?') // -2
+// - 1 - 1 = -2
+
 ```
-
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
-
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
 
 
 > [!NOTE]
-> La solución propuesta consiste en encontrar primero la fila del robot (!), a continuación su columna
-> para después iterar por los movimientos e ir cambiando la posición en el caso de encontrar un punto.
-> Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
+> La solución propuesta consiste en encontrar iterar los códigos con un switch clásico y almacenar las posibles variedades
+> como son: el punto de retorno (solo almacenar el último) o la posibilidad de estar en un bloque condicional
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_22.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_21.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_23.md)

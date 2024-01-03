@@ -1,45 +1,77 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## Distribuye el peso
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+¡Tenemos problemas con la carga de los juguetes en el trineo 🛷 de Santa 🎅! 
+Parece que la distribución de los juguetes no es la adecuada y el trineo no puede despegar. ¿Podrías ayudarnos a resolver este problema?
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
+Para solucionarlo hemos decidido utilizar un método similar al de un filtro de imágenes. 
+En cada posición, vamos a distribuir la carga de los juguetes en función del número de juguetes de las posiciones vecinas.
 
-El almacén se representa como un array de cadenas de texto, donde:
+Una posición vecina es aquella que está encima, abajo, a la izquierda o a la derecha de la posición actual. 
+Por lo tanto, no se consideran vecinas las posiciones en diagonal.
 
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
+Escribe una función distributeGifts que reciba una matriz de números representando los juguetes en el trineo y devuelva otra matriz con el mismo tamaño y 
+número de elementos pero donde cada elemento es el promedio de su valor original y los valores de sus vecinos.
 
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
+Ten en cuenta que hay posiciones que son null y que no contarán para el promedio como vecino pero sí se sustituirá por el valor promedio de sus vecinos.
 
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+Por ejemplo, vamos a ver un ejemplo completo:
 
 ```javascript
-const store = ['..!....', '...*.*.']
-
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
-/*
-[
-  ".......",
-  "...*!*."
+const input = [
+  [4, 5, 1],
+  [6, null, 3],
+  [8, null, 4]
 ]
-*/
 
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
+distributeGifts(input)
+
+// Resultado paso a paso de los primeros cálculos:
+
+// En la posición [0][0] tenemos el valor 4
+// Sus vecinos son los valores 5 y 6
+// (4 + 5 + 6) / 3 = 5
+
+// En la posición [0][1] tenemos el valor 5
+// Sus vecinos son los valores 4 y 1
+// (5 + 4 + 1) / 3 = 3.33
+// Math.round(3.33) = 3
+
+// En la posición [0][2] tenemos el valor 1
+// Sus vecinos son los valores 5 y 3
+// (1 + 5 + 3) / 3 = 3
+
+// En la posición [1][0] tenemos el valor 6
+// Sus vecinos son los valores 4, 8
+// (6 + 4 + 8 ) / 3 = 6
+
+// En la posición [1][1] tenemos el valor null
+// Sus vecinos son los valores 5, 6 y 3
+// (5 + 6 + 3) / 3 = 4.66
+// Math.round(4.66) = 5
+// ... y así con el resto de posiciones
+[
+  [(4 + 5 + 6) / 3, (5 + 4 + 1) / 3, (1 + 5 + 3) / 3],
+  [(6 + 4 + 8) / 3, (5 + 6 + 3) / 3, (3 + 1 + 4) / 3],
+  [(8 + 6) / 2, (8 + 4) / 2, (4 + 3) / 2]
+]
+
+// Resultado final tras redondear con Math.round()
+[
+  [5, 3, 3],
+  [6, 5, 3],
+  [7, 6, 4]
+]
 ```
 
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
+Ten en cuenta:
 
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
+- Las matrices no siempre son cuadradas, pueden tener más filas que columnas o viceversa.
+- Para redondear los valores, debes utilizar la función Math.round() de JavaScript.
+- Los valores null no se tienen en cuenta para el cálculo del promedio pero sí se sustituyen por el valor promedio de sus vecinos.
+- Los bordes de la matriz tienen menos vecinos posibles que el resto de posiciones.
+- Siempre son números enteros positivos.
 
 
 > [!NOTE]
@@ -48,10 +80,10 @@ También que el robot es posible que termine en su posición inicial si no puede
 > Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_20.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_19.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_21.md)

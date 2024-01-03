@@ -1,45 +1,43 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## Enfrenta el sabotaje
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+¡Alerta en la fábrica de juguetes de Santa! El Grinch 😈 se ha infiltrado en el almacén y ha saboteado algunos de los juguetes 💣.
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
+Los elfos necesitan ayuda para encontrar los juguetes saboteados y eliminarlos antes de que llegue la Navidad. 
+Para ello tenemos el mapa 🗺️ del almacén, que es una matriz.
 
-El almacén se representa como un array de cadenas de texto, donde:
+Los * representan los juguetes saboteados y las celdas vacías con un espacio en blanco son los lugares seguros.
 
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
+Tu tarea es escribir una función que devuelva la misma matriz pero, en cada posición, nos indique el número de juguetes saboteados que hay en las celdas adyacentes.
 
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
-
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+Si una celda contiene un juguete saboteado, debe permanecer igual. Si una celda no toca ningún juguete saboteado, debe contener un espacio en blanco .
 
 ```javascript
-const store = ['..!....', '...*.*.']
+const store = [
+  ['*', ' ', ' ', ' '],
+  [' ', ' ', '*', ' '],
+  [' ', ' ', ' ', ' '],
+  ['*', ' ', ' ', ' ']
+]
 
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
-/*
+console.log(revealSabotage(store))
+/* Debería mostrar:
 [
-  ".......",
-  "...*!*."
+    ['*', '2', '1', '1'],
+    ['1', '2', '*', '1'],
+    ['1', '2', '1', '1'],
+    ['*', '1', ' ', ' ']
 ]
 */
-
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
 ```
 
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
+Ten en cuenta que…
 
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
+- Las celdas diagonales también se consideran adyacentes.
+- El tablero siempre tendrá al menos una celda vacía y un juguete saboteado *.
+- El tablero puede tener cualquier tamaño.
+- Los números son cadenas de texto.
 
 
 > [!NOTE]
@@ -48,10 +46,10 @@ También que el robot es posible que termine en su posición inicial si no puede
 > Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_19.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_18.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_20.md)

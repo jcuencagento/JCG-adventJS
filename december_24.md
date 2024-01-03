@@ -1,46 +1,42 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## Brincos en la escalera
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+En la aldea de Santa, hay una escalera mágica que lleva a la fábrica de juguetes 🧸. 
+Los elfos, siempre buscando hacer ejercicio y divertirse 🏃‍♂️, deciden saltar los peldaños de la escalera.
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
+Nos dan steps como el número de peldaños de la escalera y el número máximo de peldaños maxJump que un elfo puede saltar en un solo salto.
 
-El almacén se representa como un array de cadenas de texto, donde:
+Tu tarea es ayudar a los elfos a encontrar todas las posibles secuencias de saltos que pueden hacer para subir la escalera, ordenadas de menos a más. 
+Teniendo en cuenta que los elfos pueden saltar como máximo maxJump peldaños en un solo salto (pero pueden saltar menos peldaños si así lo desean).
 
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
+Por ejemplo, si hay una escalera de steps = 4 y maxJump = 2 es el número máximo de peldaños que un elfo puede saltar en un solo salto, entonces hay cinco secuencias de saltos posibles:
 
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
-
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+- [1, 1, 1, 1] (salta 1 peldaño 4 veces)
+- [1, 1, 2] (salta 1 peldaño 2 veces y luego 2 peldaños)
+- [1, 2, 1] (salta 1 peldaño, luego 2 peldaños y luego 1 peldaño)
+- [2, 1, 1] (salta 2 peldaños, luego 1 peldaño y luego 1 peldaño)
+- [2, 2] (salta 2 peldaños 2 veces)
+Más ejemplos:
 
 ```javascript
-const store = ['..!....', '...*.*.']
-
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
+getStaircasePaths(2, 1) // [[1, 1]]
+getStaircasePaths(3, 3) // [[1, 1, 1], [1, 2], [2, 1], [3]]
+getStaircasePaths(5, 1) // [[1, 1, 1, 1, 1]]
+getStaircasePaths(5, 2)
 /*
 [
-  ".......",
-  "...*!*."
+  [1, 1, 1, 1, 1],
+  [1, 1, 1, 2],
+  [1, 1, 2, 1],
+  [1, 2, 1, 1],
+  [1, 2, 2],
+  [2, 1, 1, 1],
+  [2, 1, 2],
+  [2, 2, 1],
 ]
 */
-
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
 ```
-
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
-
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
-
 
 > [!NOTE]
 > La solución propuesta consiste en encontrar primero la fila del robot (!), a continuación su columna
@@ -48,10 +44,10 @@ También que el robot es posible que termine en su posición inicial si no puede
 > Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_24.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_23.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_25.md)

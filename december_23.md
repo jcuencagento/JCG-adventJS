@@ -1,45 +1,49 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## La comida de navidad
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+¡Santa 🎅 está organizando una gran cena navideña 🫓 y quiere asegurarse de que todos los platos sean únicos y variados!
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
+Te da una lista de platos navideños donde cada elemento consiste en una lista de strings que comienza con el nombre del plato, 
+seguido de todos los ingredientes utilizados para su preparación.
 
-El almacén se representa como un array de cadenas de texto, donde:
+Tienes que escribir una función que agrupe los platos por ingredientes siempre que haya al menos 2 platos que los contengan.
 
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
+Así que devolvemos un array de arrays donde la primera posición es el nombre del ingrediente y el resto los nombres de los platos.
 
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
-
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+Tanto la lista de ingredientes como los platos deben estar ordenados alfabéticamente.
 
 ```javascript
-const store = ['..!....', '...*.*.']
+const dishes = [
+  ["christmas turkey", "turkey", "sauce", "herbs"],
+  ["cake", "flour", "sugar", "egg"],
+  ["hot chocolate", "chocolate", "milk", "sugar"],
+  ["pizza", "sauce", "tomato", "cheese", "ham"],
+]
 
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
+organizeChristmasDinner(dishes)
+
 /*
+
+"sauce" está en 2 platos: "christmas turkey" y "pizza".
+"sugar" está en 2 platos: "cake" y "hot chocolate".
+El resto de ingredientes solo aparecen en un plato, por lo que no los mostramos.
+
+Enseñamos primero "sauce" porque alfabéticamente está antes que "sugar".
+Y los platos de cada ingrediente también están ordenados alfabéticamente.
+
 [
-  ".......",
-  "...*!*."
+  ["sauce", "christmas turkey", "pizza"],
+  ["sugar", "cake", "hot chocolate"]
 ]
 */
-
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
 ```
 
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
+Ten en cuenta que:
 
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
+- Todos los nombres de los platos son diferentes.
+- Los nombres de los ingredientes para un plato dado son distintos entre sí.
+- Si no hay ingredientes repetidos, devolvemos un array vacío.
 
 
 > [!NOTE]
@@ -48,10 +52,10 @@ También que el robot es posible que termine en su posición inicial si no puede
 > Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_23.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_22.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_24.md)

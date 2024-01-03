@@ -1,57 +1,39 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## Mensaje binario
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+Los elfos están recibiendo mensajes binarios extraños desde Marte 🪐. ¿Los extraterrestres están tratando de comunicarse con ellos? 👽
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
-
-El almacén se representa como un array de cadenas de texto, donde:
-
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
-
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
-
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+El mensaje que llega es un array de 0s y 1s. Parece que han encontrado un patrón… 
+Para asegurarse, quieren encontrar el segmento más largo de la cadena donde el número de 0s y 1s sea igual.
 
 ```javascript
-const store = ['..!....', '...*.*.']
+findBalancedSegment([1, 1, 0, 1, 1, 0, 1, 1])
+//                         |________|
+// posición del segmento:    [2, 5]
+// más largo equilibrado
+// de 0s y 1s
 
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
-/*
-[
-  ".......",
-  "...*!*."
-]
-*/
+findBalancedSegment([1, 1, 0])
+//                      |__|
+//                     [1, 2]
 
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
+findBalancedSegment([1, 1, 1])
+// no hay segmentos equilibrados: []
 ```
 
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
+Ten en cuenta que si hay más de un patrón equilibrado, debes devolver el más largo y el primero que encuentres de izquierda a derecha.
 
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
-
+Dicen que si encuentran el patrón, podrán enviar un mensaje de vuelta a Marte 🚀. Parece ser que tienen que enviarlos a https://mars.codes.
 
 > [!NOTE]
-> La solución propuesta consiste en encontrar primero la fila del robot (!), a continuación su columna
-> para después iterar por los movimientos e ir cambiando la posición en el caso de encontrar un punto.
-> Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
+> La solución propuesta consiste en anidar dos bucles para ir contando los valores, y si una partición resulta tener valores en cantidades
+> iguales y mayores que el la partición guardada (inicializado como el primer bit), será almacenado como resultado
+
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_21.js)
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_20.md)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
-
-
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_22.md)

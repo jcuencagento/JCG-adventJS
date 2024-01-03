@@ -1,45 +1,43 @@
 [🏡 Home](https://github.com/jcuencagento/JCG-adventJS)
 
-## Evita la alarma
+## Calculando distancias
 
-Estamos programando unos robots llamados giftbot 🤖🎁 que navegan de forma autónoma por los almacenes de regalos.
+Ya ha entregado Santa Claus 🎅 todos los regalos a los niños pero quieren revisar si pueden mejorar de cara al año que viene.
 
-Estamos creando una función a la que le pasamos: el almacén 🏬 que deben navegar y los movimientos ↔️ que pueden realizar.
+Los elfos quieren saber cuántos movimientos ha hecho Santa Claus 🛷 para entregar todos los regalos. Para ello, te dan un mapa de la ciudad con la ubicación de cada niño y de Santa.
 
-El almacén se representa como un array de cadenas de texto, donde:
+El mapa es una cadena de texto multi línea donde cada caracter representa una casilla. Los niños se representan por números del 1 al 9 y Santa Claus por la letra S. El resto de casillas son .
 
-- . significa que hay vía libre.
-- * significa que hay un obstáculo.
-- ! es la posición inicial del robot.
-- Los movimientos son un array de cadenas de texto, donde:
-
-- R mueve al robot una posición a la derecha.
-- L mueve al robot una posición a la izquierda.
-- U mueve al robot una posición hacia arriba.
-- D mueve al robot una posición hacia abajo.
-Hay que tener en cuenta que el robot no puede superar los obstáculos ni los límites del almacén.
-
-Dados un almacén y los movimientos, debemos devolver el array con la posición final de nuestro robot.
+Santa Claus sólo puede moverse hacia arriba, abajo, izquierda o derecha, y cada movimiento cuenta como 1 km. Además, siempre empieza en la posición S y debe entregar los regalos en orden, del 1 al 9.
 
 ```javascript
-const store = ['..!....', '...*.*.']
+const map = `.....1....
+..S.......
+..........
+....3.....
+......2...`
 
-const movements = ['R', 'R', 'D', 'L']
-const result = autonomousDrive(store, movements)
-console.log(result)
+const result = travelDistance(map)
+console.log(result) // -> 12 km
 /*
-[
-  ".......",
-  "...*!*."
-]
+De la S al niño 1: 4 movimientos
+Del niño 1 al 2: 5 movimientos
+Del niño 2 al 3: 3 movimientos
+Total: 12 movimientos
 */
 
-// El último movimiento es hacia la izquierda, pero no puede moverse porque hay un obstáculo.
+const result2 = travelDistance(`..S.1...`)
+console.log(result2) // -> 2
 ```
 
-Ten en cuenta que la store es un array que puede ser de un número de filas que va de 1 a 100, ya que tenemos almacenes de todos los tamaños.
+Escribe una función travelDistance que reciba un mapa y devuelva la distancia total que ha recorrido Santa Claus según la posición de los niños.
 
-También que el robot es posible que termine en su posición inicial si no puede moverse o si está dando vueltas.
+Ten en cuenta que:
+
+- El mapa no tiene por qué ser cuadrado.
+- El mapa siempre tendrá al menos un niño.
+- El mapa siempre tendrá una posición inicial para Santa Claus.
+- Los números de los niños nunca se repiten.
 
 
 > [!NOTE]
@@ -48,10 +46,7 @@ También que el robot es posible que termine en su posición inicial si no puede
 > Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_25.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
-
-
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_24.md)
