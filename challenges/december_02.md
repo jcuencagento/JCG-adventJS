@@ -34,10 +34,10 @@ manufacture(gifts, materials) // []
 > devuelve true la función every, que checkea que cada carácter del "gift" esté incluido en el array de "materiales".
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_02.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_02.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_01.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_01.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_03.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_03.md)

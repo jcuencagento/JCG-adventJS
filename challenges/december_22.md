@@ -44,10 +44,10 @@ compile('--¿+++?') // -2
 > como son: el punto de retorno (solo almacenar el último) o la posibilidad de estar en un bloque condicional
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_22.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_22.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_21.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_21.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_23.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_23.md)

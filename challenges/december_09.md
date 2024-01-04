@@ -30,10 +30,10 @@ adjustLights(['🔴', '🔴', '🔴'])
 > el valor de la posicióna actual y el de la anterior son iguales, conviene cambiar el de más atrás.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_09.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_09.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_08.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_08.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_10.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_10.md)

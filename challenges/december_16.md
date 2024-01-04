@@ -58,10 +58,10 @@ Existe una relación entre el índice de un nodo y el índice de sus hijos. ¡Bu
 > y el de la derecha estará en la posición par.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_16.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_15.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_17.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_17.md)

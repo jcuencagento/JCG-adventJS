@@ -43,10 +43,10 @@ Los números de horas pueden llegar hasta la cifra 9999.
 > se mira si el final de dicho intervalo está por encima del último valor actual, para actualizarlo en ese caso.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_17.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_17.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_16.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_16.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_18.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_18.md)

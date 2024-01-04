@@ -30,10 +30,10 @@ Dicen que si encuentran el patrón, podrán enviar un mensaje de vuelta a Marte 
 > La solución propuesta consiste en anidar dos bucles para ir contando los valores, y si una partición resulta tener valores en cantidades
 > iguales y mayores que el la partición guardada (inicializado como el primer bit), será almacenado como resultado
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_21.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_21.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_20.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_20.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_22.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_22.md)

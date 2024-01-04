@@ -37,10 +37,10 @@ console.log(result1)
 > reduciendo desde el mayor valor (50) hasta el menor (unidades), teniendo en la posición siguiente el carácter a ser guardado.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_08.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_08.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_07.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_07.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_09.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_09.md)

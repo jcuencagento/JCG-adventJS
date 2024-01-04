@@ -36,10 +36,10 @@ Notas:
 > el índice del último paréntesis de apertura y el primero de cierre, para hacer un reverse del array (formado por el string con los índices mencionados)
 > y volver a hacer el mismo proceso hasta que no queden paréntesis.
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_04.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_04.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_03.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_03.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_05.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_05.md)

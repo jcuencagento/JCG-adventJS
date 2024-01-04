@@ -43,10 +43,10 @@ Nota:
 > del índice de altura y espacios entre los carácteres, más el salto de línea. Por último añadir altura-1 espacios, el palo y el último salto de línea.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_10.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_10.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_09.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_09.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_11.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_11.md)

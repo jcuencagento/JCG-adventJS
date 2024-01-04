@@ -33,10 +33,10 @@ Si se puede formar el palíndromo con diferentes intercambios, siempre se debe d
 > de la misma manera que antes si la palabra ya es palíndroma y se devuelve dependiendo del resultado. Solución poco optimizada.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_11.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_11.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_10.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_10.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_12.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_12.md)

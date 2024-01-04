@@ -20,10 +20,10 @@ maxGifts([1, 3, 1, 3, 100]) // 103 (3 + 100)
 > sobre todas las casas siguientes e ir añadiendo el máximo de las sumas saltándose un valor.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_14.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_13.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_13.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_15.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_15.md)

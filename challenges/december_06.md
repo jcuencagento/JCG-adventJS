@@ -42,10 +42,10 @@ Ten en cuenta que no importa si es a la izquierda o la derecha, la distancia es 
 > suma de estos dos carácteres, por último se devolverá la resta en valor absoluto de < y >, sumado al asterisco que actúa como comodín.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_06.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_06.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_05.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_05.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_07.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_07.md)

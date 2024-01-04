@@ -43,10 +43,10 @@ Por lo tanto s#+:. c+:++ es una copia válida de Santa Claus. Y, como ves, la de
 Basado en el desafío de CodeWars Photocopy decay
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_12.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_12.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_11.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_11.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_13.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_13.md)

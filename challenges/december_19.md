@@ -45,10 +45,10 @@ Ten en cuenta que…
 > y usar operadores unarios para el caso de necesitarlo, en ese caso se pasa a string
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_19.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_19.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_18.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_18.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_20.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_20.md)

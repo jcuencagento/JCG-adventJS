@@ -52,10 +52,10 @@ Los elfos se inspiraron en este reto de Code Wars.
 > por el que ha pasado Santa y en cualquier caso se introducirá el string de la carretera en el array de resultados.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_06.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_06.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_05.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_05.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_07.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_07.md)

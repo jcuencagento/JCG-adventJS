@@ -35,7 +35,7 @@ console.log(firstRepeatedId3) // 5
 > aparición del número en el propio array, por tanto si el resultado tiene algún elemento, se devuelve el primero.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_01.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_01.js)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_02.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_02.md)

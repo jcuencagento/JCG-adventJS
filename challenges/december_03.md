@@ -38,10 +38,10 @@ A tener en cuenta:
 > el carácter si no aparecía en el set. Para finalizar devuelve el primer carácter diferente o un string vacío.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_03.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_03.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_02.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_02.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_04.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_04.md)

@@ -30,10 +30,10 @@ calculateTime([
 > las horas, luego los minutos y lo segundos para finalmente concatenarlos con el formato pedido.
 
 
-[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_13.js)
+[✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_13.js)
 
 
-[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_12.md)
+[⬅️ Back](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_12.md)
 
 
-[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_14.md)
+[➡️ Next](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_14.md)
