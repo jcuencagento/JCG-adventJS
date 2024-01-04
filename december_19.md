@@ -41,9 +41,8 @@ Ten en cuenta que…
 
 
 > [!NOTE]
-> La solución propuesta consiste en encontrar primero la fila del robot (!), a continuación su columna
-> para después iterar por los movimientos e ir cambiando la posición en el caso de encontrar un punto.
-> Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
+> La solución propuesta consiste en iterar dos bucles for of (para mantener indices sin subir complejidad)
+> y usar operadores unarios para el caso de necesitarlo, en ese caso se pasa a string
 
 
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/december_19.js)
