@@ -1,32 +1,32 @@
-function drawClock(time) {
-    const nums = {
-        '0': ['***','* *','* *','* *','* *','* *','***'],
-        '1': ['  *','  *','  *','  *','  *','  *','  *'],
-        '2': ['***','  *','  *','***','*  ','*  ','***'],
-        '3': ['***','  *','  *','***','  *','  *','***'],
-        '4': ['* *','* *','* *','***','  *','  *','  *'],
-        '5': ['***','*  ','*  ','***','  *','  *','***'],
-        '6': ['***','*  ','*  ','***','* *','* *','***'],
-        '7': ['***','  *','  *','  *','  *','  *','  *'],
-        '8': ['***','* *','* *','***','* *','* *','***'],
-        '9': ['***','* *','* *','***','  *','  *','***'],
-        ':': [' ', ' ', '*', ' ', '*', ' ', ' '],
-    };
+function distributeGifts(weights) {
+    const res = []
+    let topRow = []
+    let bottomRow = []
   
-    const num0 = nums[time[0]];
-    const num1 = nums[time[1]];
-    const point = nums[':'];
-    const num3 = nums[time[3]];
-    const num4 = nums[time[4]];
-    const res = [...num0];
-    let pos = 0;
-    for (let row of res) {
-        const str =  `${row} ${num1[pos]} ${point[pos]} ${num3[pos]} ${num4[pos]}`;
-        res[pos] = [...str];
-        pos++;
-    };
-
+    for (const [y, weight] of weights.entries()) {
+        topRow = weights[y-1]
+        bottomRow = weights[y+1]
+        res[y] = []
+      
+        for (const [x, w] of weight.entries()) {
+            let top = topRow?.[x], bottom = bottomRow?.[x]
+            let left = weight?.[x-1], right = weight?.[x+1]
+            const divisor = !!w + !!top + !!bottom
+                + !!left + !!right
+                top ??= 0, bottom ??= 0, left ??= 0, right ??= 0
+    
+            const newValue = Math.round((w+top+bottom+left+right) / divisor)
+            res[y][x] = newValue
+        }
+    }
+    
     return res;
 }
 
-console.log(`Result with drawClock('01:30')`, drawClock('01:30'));
+console.log(`Result with distributeGifts([
+    [null, 5],
+    [3, null]
+  ])`, distributeGifts([
+  [null, 5],
+    [3, null]
+]));
