@@ -1,32 +1,31 @@
-function drawClock(time) {
-    const nums = {
-        '0': ['***','* *','* *','* *','* *','* *','***'],
-        '1': ['  *','  *','  *','  *','  *','  *','  *'],
-        '2': ['***','  *','  *','***','*  ','*  ','***'],
-        '3': ['***','  *','  *','***','  *','  *','***'],
-        '4': ['* *','* *','* *','***','  *','  *','  *'],
-        '5': ['***','*  ','*  ','***','  *','  *','***'],
-        '6': ['***','*  ','*  ','***','* *','* *','***'],
-        '7': ['***','  *','  *','  *','  *','  *','  *'],
-        '8': ['***','* *','* *','***','* *','* *','***'],
-        '9': ['***','* *','* *','***','  *','  *','***'],
-        ':': [' ', ' ', '*', ' ', '*', ' ', ' '],
-    };
-  
-    const num0 = nums[time[0]];
-    const num1 = nums[time[1]];
-    const point = nums[':'];
-    const num3 = nums[time[3]];
-    const num4 = nums[time[4]];
-    const res = [...num0];
-    let pos = 0;
-    for (let row of res) {
-        const str =  `${row} ${num1[pos]} ${point[pos]} ${num3[pos]} ${num4[pos]}`;
-        res[pos] = [...str];
-        pos++;
-    };
+function travelDistance(map) {
+    const map_arr = map.split('\n');
+    let row = map_arr.findIndex(el => el.includes('S'));
+    let col = map_arr[row].indexOf('S');
+    let i = 1;
+    let result = 0;
+    do {
+        let row_kid = map_arr.findIndex(el => el.includes(`${i}`));
+        let col_kid = map_arr[row_kid].indexOf(`${i}`);
+        let distance = Math.abs(row - row_kid) + Math.abs(col - col_kid);
+        result += distance;
+        row = row_kid;
+        col = col_kid;
+        i = i + 1;
+    } while (map_arr.findIndex(el => el.includes(`${i}`)) !== -1);
 
-    return res;
+  return result;
 }
 
-console.log(`Result with drawClock('01:30')`, drawClock('01:30'));
+console.log(`Result with travelDistance(
+    '.....1....
+     ..S.......
+     ..........
+     ....3.....
+     ......2...')`, 
+travelDistance(
+    `.....1.... 
+     ..S.......
+     ..........
+     ....3.....
+     ......2...`));

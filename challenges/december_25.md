@@ -41,9 +41,12 @@ Ten en cuenta que:
 
 
 > [!NOTE]
-> La solución propuesta consiste en encontrar primero la fila del robot (!), a continuación su columna
-> para después iterar por los movimientos e ir cambiando la posición en el caso de encontrar un punto.
-> Por último se vuelve a poner el robot en la posición final dependiendo de la fila y columna.
+> La solución propuesta consiste en transformar el mapa en un array en el cual ubicar cada elemento primero en su fila
+> y después en su columna, después se iterará en un do while hasta que no se encuentre el número de niño siguiente, en este
+> bucle se busca cada número igual que a Santa y se irá acumulando el resultado. 
+
+> [!IMPORTANT]
+> Fin!! 😀🎅
 
 
 [✅ Solución](https://github.com/jcuencagento/JCG-adventJS/blob/master/challenges/december_25.js)
