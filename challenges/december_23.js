@@ -1,32 +1,36 @@
-function drawClock(time) {
-    const nums = {
-        '0': ['***','* *','* *','* *','* *','* *','***'],
-        '1': ['  *','  *','  *','  *','  *','  *','  *'],
-        '2': ['***','  *','  *','***','*  ','*  ','***'],
-        '3': ['***','  *','  *','***','  *','  *','***'],
-        '4': ['* *','* *','* *','***','  *','  *','  *'],
-        '5': ['***','*  ','*  ','***','  *','  *','***'],
-        '6': ['***','*  ','*  ','***','* *','* *','***'],
-        '7': ['***','  *','  *','  *','  *','  *','  *'],
-        '8': ['***','* *','* *','***','* *','* *','***'],
-        '9': ['***','* *','* *','***','  *','  *','***'],
-        ':': [' ', ' ', '*', ' ', '*', ' ', ' '],
-    };
+function organizeChristmasDinner(dishes) {
+    const ingredients = {};
+    for (const [dish, ...dishIngredients] of dishes) {
+        for (const ingredient of dishIngredients) {
+            if (ingredients[ingredient]) {
+                ingredients[ingredient].push(dish);
+            } else {
+                ingredients[ingredient] = [dish];
+            }
+        }
+    }
   
-    const num0 = nums[time[0]];
-    const num1 = nums[time[1]];
-    const point = nums[':'];
-    const num3 = nums[time[3]];
-    const num4 = nums[time[4]];
-    const res = [...num0];
-    let pos = 0;
-    for (let row of res) {
-        const str =  `${row} ${num1[pos]} ${point[pos]} ${num3[pos]} ${num4[pos]}`;
-        res[pos] = [...str];
-        pos++;
-    };
-
-    return res;
+    const result = [];
+  
+    for (const ingredient in ingredients) {
+        if (ingredients[ingredient].length > 1) {
+            result.push([ingredient, ...ingredients[ingredient].sort()]);
+        }
+    }
+  
+    return result.sort((a, b) => a[0].localeCompare(b[0]));
 }
 
-console.log(`Result with drawClock('01:30')`, drawClock('01:30'));
+console.log(`Result with organizeChristmasDinner([
+    ["gingerbread", "flour", "ginger", "sugar"],
+    ["glazed ham", "ham", "honey", "sugar", "vinegar"],
+    ["roast chicken", "chicken", "rosemary", "thyme", "garlic"],
+    ["vegetable soup", "carrot", "potato", "onion", "garlic"],
+    ["fruit punch", "apple juice", "orange juice", "sugar"]
+  ])`, organizeChristmasDinner([
+    ["gingerbread", "flour", "ginger", "sugar"],
+    ["glazed ham", "ham", "honey", "sugar", "vinegar"],
+    ["roast chicken", "chicken", "rosemary", "thyme", "garlic"],
+    ["vegetable soup", "carrot", "potato", "onion", "garlic"],
+    ["fruit punch", "apple juice", "orange juice", "sugar"]
+  ]));
